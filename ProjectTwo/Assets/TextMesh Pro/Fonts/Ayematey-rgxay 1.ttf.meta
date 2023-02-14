@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 1ece351a61aa1bb4699df66e745d1be9
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Aye Matey
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 9c305619192dab7489cd742fa347306d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
