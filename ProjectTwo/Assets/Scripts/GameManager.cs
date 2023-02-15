@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance {get; private set;}
     public GameObject dialogBox;
     public TextMeshProUGUI dialogText;
+    private bool raiseLower = false;
 
     public void DialogShow(string text){
         dialogBox.SetActive(true);
@@ -23,8 +24,10 @@ public class GameManager : MonoBehaviour
     foreach (char c in text.ToCharArray()){
         dialogText.text += c;
         yield return new WaitForSeconds(0.02f);
+        }
     }
-    }
+
+    //
    
     void Awake(){
         if (Instance == null){
