@@ -7,14 +7,15 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance {get; private set;}
     public GameObject dialogBox;
     public TextMeshProUGUI dialogText;
+
     public void DialogShow(string text){
-    dialogBox.SetActive(true);
-    StopAllCoroutines();
-    StartCoroutine(TypeText(text));
+        dialogBox.SetActive(true);
+        StopAllCoroutines();
+        StartCoroutine(TypeText(text));
     }
 
     public void DialogHide(){
-    dialogBox.SetActive(false);
+        dialogBox.SetActive(false);
     }  
     
     IEnumerator TypeText(string text){
@@ -36,7 +37,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        DialogHide();
     }
 
     // Update is called once per frame
