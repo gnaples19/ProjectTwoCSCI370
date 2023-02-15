@@ -1,10 +1,13 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance {get; private set;}
+
+    public GameObject startMenu;
     public GameObject dialogBox;
     public TextMeshProUGUI dialogText;
     private bool raiseLower = false;
@@ -26,9 +29,14 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(0.02f);
         }
     }
+    }
+    public void StartGame(){
+    startMenu.SetActive(false);
 
-    //
-   
+    }
+    public void ReloadGame(){
+        SceneManager.LoadScene("GN_Scene");
+    }
     void Awake(){
         if (Instance == null){
             Instance = this;
