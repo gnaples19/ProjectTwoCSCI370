@@ -42,7 +42,6 @@ public class Boat : MonoBehaviour
         yield return new WaitForSeconds(10);
         //Destroy(gameObject);
         //GameManager.Instance.FoundBoat();
-        GameManager.Instance.
     }
 
 }
