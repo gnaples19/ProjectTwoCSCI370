@@ -5,7 +5,7 @@ using UnityEngine;
 public class Boat : MonoBehaviour
 {
     //Sound Effect from https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=48358"
-
+    public GameObject exitButton;
     public string text;
     private AudioSource audio;
 
@@ -15,6 +15,7 @@ public class Boat : MonoBehaviour
         if(collider2D.gameObject.CompareTag("Player")){
             GameManager.Instance.DialogShow(text);
             StartCoroutine("Escape");
+            exitButton.SetActive(true);
         }
     }
 

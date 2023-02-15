@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance {get; private set;}
-
+    public GameObject Pirate;
     public GameObject startMenu;
     public GameObject dialogBox;
     public TextMeshProUGUI dialogText;
@@ -29,13 +29,15 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(0.02f);
         }
     }
-    }
+    
     public void StartGame(){
     startMenu.SetActive(false);
+    Pirate.SetActive(true);
 
     }
     public void ReloadGame(){
-        SceneManager.LoadScene("GN_Scene");
+        DialogHide();
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }
     void Awake(){
         if (Instance == null){
