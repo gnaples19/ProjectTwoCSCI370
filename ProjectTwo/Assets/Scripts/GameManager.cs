@@ -8,9 +8,11 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance {get; private set;}
     public GameObject Pirate;
     public GameObject startMenu;
+
+    public GameObject Canvas;
     public GameObject dialogBox;
     public TextMeshProUGUI dialogText;
-    private bool raiseLower = false;
+
 
     public void DialogShow(string text){
         dialogBox.SetActive(true);
@@ -37,12 +39,14 @@ public class GameManager : MonoBehaviour
     }
     public void ReloadGame(){
         DialogHide();
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("GN_Scene");
+        
     }
     void Awake(){
         if (Instance == null){
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(Canvas);
         } else {
         Destroy(gameObject);
     }
